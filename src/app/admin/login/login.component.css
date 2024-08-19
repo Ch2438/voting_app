@@ -1,0 +1,149 @@
+.main{
+width: 100%;
+height: 100%;
+
+}
+header{
+  background-color: rgb(255, 255, 255);
+
+  text-align: center;
+  width: 100%;
+}
+header img{
+  width: 32%;
+}
+.login{
+  border: 1px solid black;
+  width: 35%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 13px;
+  position: relative;
+  top: 16vh;
+  left: 70vh;
+  align-items: center;
+}
+.login-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login img{
+  width: 30%;
+    position: relative;
+    bottom: 46px;
+    right: 4px;
+}
+.login input{
+  width: 80%;
+    padding: 12px 5px 12px 13px;
+    border-radius: 8px;
+    border-inline-style: none;
+    margin:  12px 0 13px 0;
+}
+
+a{
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: larger;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+#login{
+  padding: 5px 30px 5px 30px;
+  background-color: rgb(75, 113, 240);
+  color: aliceblue;
+  font-size: large;
+  border-radius: 5px;
+  border: none;
+}
+#login:hover{
+  background-color: rgb(15, 6, 150);
+  color: rgb(255, 250, 250);
+  cursor: pointer;
+}
+#User{
+  padding: 5px 30px 5px 30px;
+  background-color: rgba(52, 39, 68, 0.37);
+  color: aliceblue;
+  font-size: large;
+  border-radius: 5px;
+  border: none;
+}
+#User:hover{
+  background-color: rgba(15, 8, 24, 0.37);
+  color: rgb(255, 250, 250);
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .login {
+      width: 45%;
+
+  }
+
+  header img {
+      width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+      width: 70%;
+      left: 10vh;
+      top: 10vh;
+  }
+
+  .login img {
+      width: 50%;
+  }
+
+  header img {
+      width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+      width: 90%;
+      left: 3vh;
+      top: 8vh;
+  }
+
+  .login img {
+      width: 70%;
+  }
+
+  header img {
+      width: 90%;
+  }
+
+  .login input {
+      width: 100%;
+  }
+
+  .login label {
+      margin: 0;
+      font-size: medium;
+  }
+
+  #login, #User {
+      width: 100%;
+      text-align: center;
+  }
+
+  #login, #User {
+      padding: 10px;
+      font-size: medium;
+  }
+
+  .login-form {
+      gap: 15px;
+  }
+}
+

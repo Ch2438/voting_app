@@ -1,0 +1,17 @@
+<div class="main">
+  <header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCVDyT8DiM5Yc8ryWCdCF_VMMgQBPkY3GSUfBxEb_h2ZLLPvXThAu8xC8pywQEsObb0QE&usqp=CAU" alt="Vote">
+  </header>
+  <div class="login">
+    <img src="https://banner2.cleanpng.com/20180426/lwq/kisspng-computer-icons-login-management-user-5ae155f3386149.6695613615247170432309.jpg" alt="login">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="signup-form">
+      <label style="margin: 0px 309px 0 0;font-size: larger;" for="user">User name</label>
+      <input id="user" type="text" formControlName="user" placeholder="Please Enter Your User Name">
+      <label style="margin: 0px 346px 0 0;font-size: larger;" for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Please Enter Your Email">
+      <label style="margin: 0 323px 0 0; font-size: larger;" for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Please Enter Your Password">
+      <button id="register" type="submit">Register</button>
+    </form>
+  </div>
+</div>

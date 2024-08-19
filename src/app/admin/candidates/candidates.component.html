@@ -1,0 +1,44 @@
+<div class="header">
+  <h1>Candidate List</h1>
+  <nav>
+
+    <a routerLink="/admin/admin-positions">Positions</a>
+    <a routerLink="/user/user-login">sign as User</a>
+    <button id="logout" (click)="onLogout()">Sign Out</button>
+  </nav>
+</div>
+
+<button class="add-cand" (click)="toggleForm()">Add Candidates</button>
+
+<div class="position-main">
+  <div *ngIf=" selectedPosition " class="position">
+    <h2>{{ selectedPosition.name }}</h2>
+    <div *ngFor="let candidate of selectedPosition.candidates_info" class="candidate">
+      <h3>{{ candidate.name }}</h3>
+      <p>Age: {{ candidate.age }}</p>
+      <p>Party: {{ candidate.party }}</p>
+      <p>Votes: {{ candidate.counter }}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" [ngClass]="{'show': showModal}" (ngSubmit)="addCandidate()">
+  <div class="modal-content">
+    <span class="close" (click)="toggleForm()">&times;</span>
+    <h2>Add Candidate</h2>
+    <form class="form" style="display: flex;flex-direction: column;gap: 6px;" [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <label for="position">Position:</label>
+      <select style="padding: 4px;width: 70%;" id="position" formControlName="position">
+        <option  *ngFor="let pos of candidates" [value]="pos.name">{{ pos.name }}</option>
+      </select>
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name">
+      <label for="age">Age:</label>
+      <input id="age" type="number" formControlName="age">
+      <label for="party">Party:</label>
+      <input id="party" type="text" formControlName="party">
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>

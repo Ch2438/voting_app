@@ -1,0 +1,19 @@
+<div class="main">
+  <header>
+    <img src="https://assets.nationbuilder.com/ohiocitizenaction/pages/2538/attachments/original/1694023441/vote.png?1694023441" alt="Vote">
+  </header>
+  <div class="login">
+    <img src="https://banner2.cleanpng.com/20180426/lwq/kisspng-computer-icons-login-management-user-5ae155f3386149.6695613615247170432309.jpg" alt="login">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+      <label style="margin: 0px 346px 0 0;font-size: larger;" for="email">Email</label>
+      <input id="email" type="email" formControlName="email" placeholder="Please Enter Your Email">
+      <label style="margin: 0 323px 0 0; font-size: larger;" for="password">Password</label>
+      <input id="password" type="password" formControlName="password" placeholder="Please Enter Your Password">
+      <div style="display: flex; gap: 15px; align-items: baseline;">
+        <button id="login" type="submit">Login</button>
+        <a routerLink="/user/user-register">Register</a>
+        <a routerLink="/admin/admin-login">SignIn as Admin</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>Candidates for {{ selectedPosition?.name }}</h1>
+  <nav>
+    <a routerLink="/user/user-positions">Positions</a>
+    <a routerLink="/user/user-vote">Vote</a>
+    <a routerLink="/user/user-result">Result</a>
+    <button id="logout" (click)="onLogout()">Sign Out</button>
+  </nav>
+</div>
+
+<div class="candidates-container" *ngIf="selectedPosition">
+  <div *ngFor="let candidate of selectedPosition.candidates_info" class="candidate-card">
+    <h2>{{ candidate.name }}</h2>
+    <p>Age: {{ candidate.age }}</p>
+    <p>Party: {{ candidate.party }}</p>
+  </div>
+</div>

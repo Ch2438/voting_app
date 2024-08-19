@@ -1,0 +1,15 @@
+<div class="header">
+  <h1>Election Positions</h1>
+  <nav>
+    <a routerLink="/user/user-login">sign as User</a>
+    <button id="logout" (click)="onLogout()">Sign Out</button>
+  </nav>
+</div>
+
+<div class="positions-container">
+  <div *ngFor="let position of positions" class="position-card">
+    <h2>{{ position.name }}</h2>
+    <button (click)="showCandidates(position)">Show Candidates</button>
+  </div>
+</div>
+

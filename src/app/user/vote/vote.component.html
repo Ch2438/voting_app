@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>Vote for Election Positions</h1>
+  <nav>
+    <a routerLink="/user/user-positions">Positions</a>
+    <a routerLink="/user/user-result">Result</a>
+    <button id="logout" (click)="onLogout()">Sign Out</button>
+  </nav>
+</div>
+
+<div class="positions-container">
+  <div *ngFor="let position of positions" class="position-card">
+    <h2>{{ position.name }}</h2>
+    <button [disabled]="position.disabled"
+            [ngClass]="{'disabled-button': position.disabled}"
+            (click)="goToElection(position)">
+      {{ position.disabled ? 'You have already voted' : 'Go to Vote' }}
+    </button>
+  </div>
+</div>
