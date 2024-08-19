@@ -30,6 +30,7 @@ export class ElectionComponent implements OnInit {
 
     if (!votes[currentUser]) {
       votes[currentUser] = [];
+      console.log("vote")
     }
     votes[currentUser].push(this.selectedPosition.name);
     localStorage.setItem('votes', JSON.stringify(votes));
