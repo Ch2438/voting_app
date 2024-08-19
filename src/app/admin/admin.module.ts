@@ -6,6 +6,7 @@ import { PositionsComponent } from './positions/positions.component';
 import { AppComponent } from '../app.component';
 import { FormsModule,FormControl,FormControlName,FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AdminPipe } from '../admin.pipe';
 
 
 
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     CandidatesComponent,
     PositionsComponent,
+    AdminPipe,
   ],
   imports: [
     CommonModule,
