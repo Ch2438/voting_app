@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('loggedInEmail', email);
         this.router.navigate(['/user/user-positions']);
         console.log("saad")
+        console.log("hi zeshan")
       } else {
         alert('Incorrect password');
       }
